@@ -13,18 +13,15 @@ const DoctorsList: React.FC<DoctorsListProps> = ({
   const [doctors, setDoctors] = useState<DoctorDto[]>([]);
   const [filteredDoctors, setFilteredDoctors] = useState<DoctorDto[]>([]);
 
-  const getCityListData = async () => {
+  const getDoctorsData = async () => {
     const response: DoctorDto[] = await fetch(
       "https://run.mocky.io/v3/3d1c993c-cd8e-44c3-b1cb-585222859c21"
     ).then((response) => response.json());
 
     setDoctors(response);
   };
-  const findDoctorSpeciality = (specialityId: string) => {
-    return doctorsSpeciality.find(
-      (speciality) => speciality.id === specialityId
-    );
-  };
+  const findDoctorSpeciality = (specialityId: string) =>
+    doctorsSpeciality.find((speciality) => speciality.id === specialityId);
 
   const getCurrentAge = (birthdayDate: string) => {
     const today = new Date();
@@ -61,7 +58,7 @@ const DoctorsList: React.FC<DoctorsListProps> = ({
   }, [formData, doctors]);
 
   useEffect(() => {
-    getCityListData();
+    getDoctorsData();
   }, []);
 
   return (
