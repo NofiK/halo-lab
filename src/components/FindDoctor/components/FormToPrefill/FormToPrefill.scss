@@ -1,0 +1,147 @@
+.FindDoctorForm {
+  display: flex;
+  background-color: #53729d;
+  border-radius: 20px;
+  width: 620px;
+  height: 90%;
+  justify-content: center;
+  position: relative;
+  .PrescriptionHandler {
+    position: absolute;
+    top: -8px;
+    border-radius: 8px;
+    width: 300px;
+    height: 40px;
+    background-color: rgb(177, 177, 177);
+  }
+  .PaperList {
+    display: flex;
+
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
+    margin: 25px 30px;
+    height: 85%;
+    width: 100%;
+    background-color: white;
+    padding: 30px;
+    -webkit-box-shadow: 15px 15px 3px 1px #426187;
+    -moz-box-shadow: 15px 15px 3px 1px #426187;
+    box-shadow: 15px 15px 3px 1px #426187;
+    .RedCrossImage {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .Form {
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    align-items: start;
+
+    .EmailAndMobileBox {
+      display: flex;
+      gap: 20px;
+      > div {
+        width: 100%;
+        position: relative;
+        .Error{
+          display: flex;
+          margin-top: 4px;
+          margin-bottom: 0px;
+          gap: 5px;
+          font-size: 12px;
+          bottom: -33px;
+          color: rgb(252, 60, 60);
+        }
+      }
+    }
+
+    .InputBox {
+      width: 85%;
+      position: relative;
+      label {
+        font-size: 13px;
+        color: rgb(171, 171, 171);
+        font-weight: 600;
+      }
+      input {
+        margin-top: 4px;
+        width: 100%;
+        display: inline-flex;
+        border: none;
+        font-size: 16px;
+        border-bottom: 4px rgb(201, 201, 201) solid;
+        border-radius: 2px;
+        &:focus {
+          outline: none;
+        }
+      }
+      select {
+        margin-top: 4px;
+        width: 101%;
+        display: block;
+        border: none;
+        font-size: 17px;
+        border-bottom: 4px rgb(201, 201, 201) solid;
+        border-radius: 2px;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .ValidationBanner{
+      background-color: rgb(255, 240, 213);
+      border-radius: 5px;
+      padding: 0 10px;
+      border: 1px solid rgb(250, 183, 58);
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .SubmitButton{
+      border: none;
+      font-size: 20px;
+      position: absolute;
+      bottom: 60px;
+      padding: 6px 15px;
+      border-radius: 5px;
+      font-weight: 500;
+      color: white;
+      background-color: #53729d;
+      transition: 200ms all;
+      &:hover{
+        background-color: rgb(72, 97, 132);
+      }
+    }
+  }
+  .WarningIcon{
+    width: 20px;
+  }
+  .ErrorMessage{
+    display: flex;
+    gap: 5px;
+    font-size: 12px;
+    position: absolute;
+    bottom: -33px;
+    color: rgb(252, 60, 60);
+  }
+  .ErrorIcon{
+    width: 14px;
+    
+  }
+  .PencilIcon{
+    width: 500px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    position: absolute;
+    bottom: 30px;
+    right: 380px;
+  }
+}
